@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling Stations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="voters.html">Voters</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="results.html">Results</a>
+        <a href="polling.html">Polling Stations</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <h1>Polling Stations</h1>
+
+    <table id="pollingTable">
+        <thead>
+            <tr>
+                <th>Polling Station ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Capacity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Polling station data will be populated here -->
+        </tbody>
+    </table>
+
+    <h2>Add Polling Station</h2>
+    <form id="pollingForm">
+        <label for="pollingId">Polling Station ID:</label>
+        <input type="number" id="pollingId" required>
+
+        <label for="pollingName">Name:</label>
+        <input type="text" id="pollingName" required>
+
+        <label for="pollingAddress">Address:</label>
+        <input type="text" id="pollingAddress" required>
+
+        <label for="pollingCapacity">Capacity:</label>
+        <input type="number" id="pollingCapacity" required>
+
+        <button type="submit">Add Polling Station</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

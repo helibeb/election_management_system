@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="voters.html">Voter Registration</a></li>
+            <li><a href="candidates.html">Candidates</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="polling-stations.html">Polling Stations</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Voter Registration</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Voter ID</th>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Party ID</th>
+            </tr>
+        </thead>
+        <tbody id="voterTableBody">
+            <!-- Data will be loaded here dynamically -->
+        </tbody>
+    </table>
+    
+    <h2>Add New Voter</h2>
+    <form id="voterForm">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="date" id="dob" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="phone" placeholder="Phone" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="partyId" placeholder="Party ID" required>
+        <button type="submit">Register Voter</button>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>

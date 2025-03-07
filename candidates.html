@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="voters.html">Voters</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="results.html">Results</a>
+        <a href="polling-stations.html">Polling Stations</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <h1>Candidate Management</h1>
+
+    <table id="candidateTable">
+        <thead>
+            <tr>
+                <th>Candidate ID</th>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Party ID</th>
+                <th>Election ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Candidate data will be populated here -->
+        </tbody>
+    </table>
+
+    <h2>Add Candidate</h2>
+    <form id="candidateForm">
+        <label for="candidateId">Candidate ID:</label>
+        <input type="number" id="candidateId" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="symbol">Symbol:</label>
+        <input type="text" id="symbol" required>
+
+        <label for="partyId">Party ID:</label>
+        <input type="number" id="partyId" required>
+
+        <label for="electionId">Election ID:</label>
+        <input type="number" id="electionId" required>
+
+        <button type="submit">Add Candidate</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

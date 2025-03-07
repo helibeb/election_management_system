@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="voters.html">Voters</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="results.html">Results</a>
+        <a href="polling.html">Polling Stations</a>
+        <a href="login.html" class="login-btn">Login</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page reload
+            
+            let username = document.getElementById("newUsername").value;
+            let password = document.getElementById("newPassword").value;
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Store in localStorage (For demo, in real apps use a backend)
+            localStorage.setItem("registeredUser", username);
+            localStorage.setItem("registeredPassword", password);
+
+            alert("Registration successful! Redirecting to login...");
+            window.location.href = "login.html"; // Redirect to Login page
+        });
+    </script>
+</body>
+</html>
